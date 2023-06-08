@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jumbotron {
+    background: lightyellow;
+    width: 700px;
+}
+
+.card {
+    margin-bottom: 20px;
+    border: 1px solid black;
+    width: 700px;
+}
+
+.col-lg-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
