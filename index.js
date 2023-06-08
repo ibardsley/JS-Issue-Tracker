@@ -1,5 +1,8 @@
 document.getElementById('issueInputForm').addEventListener('submit', saveIssue);
 
+/*function to handle the data entered into the form, store the 
+information into local storage and then push the issue into the card
+format */
 function saveIssue(e) {
     var issueDesc = document.getElementById('issueDescInput').value;
     var issueSeverity = document.getElementById('issueSeverityInput').value;
@@ -32,6 +35,7 @@ function saveIssue(e) {
     e.preventDefault();
 }
 
+//change the status of the issue to closed when the close button is pressed within the card
 function setStatusClosed(id) {
     var issues = JSON.parse(localStorage.getItem('issues'));
 
@@ -45,7 +49,7 @@ function setStatusClosed(id) {
 
     fetchIssues();
 }
-
+//function to delete issues when the delete button is pressed within the card
 function deleteIssue(id) {
     var issues = JSON.parse(localStorage.getItem('issues'));
 
@@ -60,6 +64,7 @@ function deleteIssue(id) {
     fetchIssues();
 }
 
+// Get issues from local storage and post them in html format using bootstrap cards
 function fetchIssues() {
     var issues = JSON.parse(localStorage.getItem('issues'));
     var issuesList = document.getElementById('issuesList');
